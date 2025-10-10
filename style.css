@@ -1,66 +1,237 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f9f9f9;
-  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
   margin: 0;
+  padding: 0;
 }
-.container {
-  max-width: 900px;
-  margin: 2rem auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 2rem;
-}
-h1 {
-  margin-top: 0;
-  font-size: 2.2rem;
-  color: #115293;
-}
-.profile-photo {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #1976d2;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
-}
-h2 {
-  color: #1565c0;
-  border-bottom: 1.5px solid #e3e3e3;
-  padding-bottom: 0.25em;
-}
-.contact {
-  margin-bottom: 1.5rem;
-}
-.contact a {
-  color: #1976d2;
-  margin-right: 1.2em;
+
+a {
+  color: #2a7ae2;
   text-decoration: none;
 }
-.section {
-  margin-bottom: 2rem;
+
+a:hover {
+  text-decoration: underline;
 }
-ul {
-  margin: 0.5em 0 0 1.2em;
+
+/* Header */
+.site-header {
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 56px;
+  background-color: #fff;
+  position: relative;
 }
-.role {
-  font-weight: bold;
+
+.site-title {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+  color: #424242;
 }
-.dates {
+
+.site-title:hover {
+  text-decoration: none;
+  color: #2a7ae2;
+}
+
+.site-nav {
   float: right;
-  color: #666;
-  font-size: 0.97em;
+  line-height: 56px;
 }
-.project-title {
-  font-weight: bold;
+
+.site-nav .page-link {
+  color: #424242;
+  line-height: 1.5;
+  margin-left: 20px;
 }
-.publication {
-  margin-bottom: 0.4em;
+
+.site-nav .page-link:hover {
+  color: #2a7ae2;
 }
-@media (max-width: 600px) {
-  .container { padding: 1rem; }
-  .dates { float: none; display: block; margin-top: 0.1em; }
-  .profile-photo { width: 90px; height: 90px; }
+
+/* Wrapper */
+.wrapper {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Main content */
+.page-content {
+  padding: 30px 0;
+  min-height: calc(100vh - 200px);
+}
+
+.post {
+  margin-bottom: 30px;
+}
+
+.post-content {
+  margin-bottom: 30px;
+}
+
+.post-content h2 {
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #111;
+}
+
+.post-content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.post-content p {
+  margin-bottom: 15px;
+}
+
+.post-content ul {
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+
+.post-content li {
+  margin-bottom: 8px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 30px 0;
+  background-color: #f9f9f9;
+}
+
+.footer-col-wrapper {
+  font-size: 15px;
+  color: #828282;
+  margin-left: -15px;
+}
+
+.footer-col-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer-col {
+  float: left;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+
+.footer-col-1 {
+  width: 50%;
+}
+
+.footer-col-2 {
+  width: 50%;
+}
+
+.contact-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+.contact-list a {
+  color: #828282;
+  display: inline-block;
+}
+
+.contact-list a:hover {
+  color: #2a7ae2;
+}
+
+.contact-list .icon {
+  margin-right: 5px;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.username {
+  display: inline-block;
+}
+
+/* Responsive design */
+@media screen and (max-width: 800px) {
+  .site-nav {
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    background-color: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    text-align: right;
+  }
+
+  .site-nav .page-link {
+    display: block;
+    padding: 5px 10px;
+    margin-left: 20px;
+  }
+
+  .footer-col-1,
+  .footer-col-2 {
+    width: 100%;
+  }
+
+  .post-content img[style*="float: right"] {
+    float: none !important;
+    display: block;
+    margin: 0 auto 1em !important;
+    max-width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .site-title {
+    font-size: 22px;
+  }
+
+  .post-content h2 {
+    font-size: 24px;
+  }
+
+  .post-content h3 {
+    font-size: 20px;
+  }
 }
