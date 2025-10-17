@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ATS Tools - Yash Kumar</title>
+  <meta name="description" content="Applicant Tracking System Tools with AI-powered resume analysis">
+  
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://yss107.github.io/projects/ats-tools.html">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <a class="site-title" href="/">Yash Kumar</a>
+      
+      <nav class="site-nav">
+        <div class="trigger">
+          <a class="page-link" href="/#about">About</a>
+          <a class="page-link" href="/#experience">Experience</a>
+          <a class="page-link" href="/#projects">Projects</a>
+          <a class="page-link" href="../assets/CV (2).pdf">CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post">
+        <div class="post-content">
+          <h1>ATS Tools: AI-Powered Resume Analysis System</h1>
+          
+          <div class="project-meta">
+            <p><em>May 2024 – August 2024</em></p>
+            <p class="project-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Python</span>
+              <span class="tag">spaCy</span>
+              <span class="tag">Flask</span>
+            </p>
+          </div>
+
+          <h2>Overview</h2>
+          <p>ATS Tools is an intelligent Applicant Tracking System that leverages AI and Natural Language Processing to automate resume screening, candidate ranking, and job-resume matching. The system helps HR teams streamline recruitment processes and identify the best candidates efficiently.</p>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><strong>Resume Parsing:</strong> Automatic extraction of candidate information including education, experience, skills, and contact details from various resume formats (PDF, DOCX).</li>
+            <li><strong>Job-Resume Matching:</strong> Intelligent matching algorithm that compares job descriptions with candidate profiles using semantic similarity.</li>
+            <li><strong>Candidate Ranking:</strong> ML-powered ranking system that scores candidates based on relevance to job requirements.</li>
+            <li><strong>Skill Extraction:</strong> Automated identification and categorization of technical and soft skills from resumes.</li>
+            <li><strong>ATS Score Generation:</strong> Provides ATS compatibility scores and suggestions for resume optimization.</li>
+            <li><strong>Keyword Analysis:</strong> Identifies missing keywords and suggests improvements to increase ATS compatibility.</li>
+            <li><strong>Batch Processing:</strong> Ability to process and analyze multiple resumes simultaneously.</li>
+          </ul>
+
+          <h2>Technical Implementation</h2>
+          <ul>
+            <li><strong>Document Processing:</strong>
+              <ul>
+                <li>Implemented PDF and DOCX parsing using PyPDF2 and python-docx</li>
+                <li>Built robust text extraction pipeline with OCR support for scanned documents</li>
+                <li>Developed regex-based and ML-based named entity recognition for information extraction</li>
+              </ul>
+            </li>
+            <li><strong>NLP Pipeline:</strong>
+              <ul>
+                <li>Utilized spaCy for entity recognition, POS tagging, and dependency parsing</li>
+                <li>Implemented custom NER models for resume-specific entities (skills, certifications, etc.)</li>
+                <li>Applied TF-IDF and BERT embeddings for semantic text analysis</li>
+                <li>Built skill taxonomy and matching using hierarchical classification</li>
+              </ul>
+            </li>
+            <li><strong>Matching Algorithm:</strong>
+              <ul>
+                <li>Developed hybrid matching system combining keyword matching and semantic similarity</li>
+                <li>Implemented cosine similarity on sentence embeddings (Sentence-BERT)</li>
+                <li>Created weighted scoring system considering experience level, education, and skills</li>
+                <li>Built explanation module to provide matching rationale</li>
+              </ul>
+            </li>
+            <li><strong>API & Frontend:</strong>
+              <ul>
+                <li>Built RESTful API using Flask with multi-threading for concurrent processing</li>
+                <li>Developed responsive web interface for resume upload and analysis</li>
+                <li>Implemented real-time progress tracking for batch processing</li>
+                <li>Created dashboard with analytics and visualizations (D3.js)</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2>Results & Impact</h2>
+          <ul>
+            <li>Reduced resume screening time by 70% through automation.</li>
+            <li>Achieved 92% accuracy in skill extraction from diverse resume formats.</li>
+            <li>Improved candidate-job matching precision by 45% compared to keyword-only methods.</li>
+            <li>Processed 10,000+ resumes with average processing time of 3 seconds per resume.</li>
+            <li>Helped HR teams reduce time-to-hire by 35%.</li>
+          </ul>
+
+          <h2>Use Cases</h2>
+          <ul>
+            <li><strong>For Job Seekers:</strong> Analyze resume ATS compatibility and get optimization suggestions</li>
+            <li><strong>For Recruiters:</strong> Quickly screen large volumes of resumes and identify top candidates</li>
+            <li><strong>For HR Departments:</strong> Streamline recruitment pipeline and reduce manual effort</li>
+            <li><strong>For Job Portals:</strong> Provide intelligent job recommendations based on candidate profiles</li>
+          </ul>
+
+          <h2>Technologies Used</h2>
+          <p><strong>NLP:</strong> spaCy, NLTK, Sentence-BERT, Transformers<br>
+          <strong>ML:</strong> Scikit-learn, TensorFlow<br>
+          <strong>Document Processing:</strong> PyPDF2, python-docx, Tesseract OCR<br>
+          <strong>Backend:</strong> Flask, Python<br>
+          <strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap, D3.js<br>
+          <strong>Database:</strong> MongoDB<br>
+          <strong>Deployment:</strong> Docker, AWS</p>
+
+          <div class="project-navigation">
+            <a href="/#projects" class="back-link">← Back to Projects</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:Jangidyash590@gmail.com">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span class="username">Jangidyash590@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/yashkumar" target="_blank">
+                <span class="icon"><i class="fab fa-twitter"></i></span>
+                <span class="username">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/yash-kumar09/" target="_blank">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span class="username">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/yss107" target="_blank">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span class="username">yss107</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-2">
+          <p>Machine Learning Engineer specializing in AI solutions, computer vision, and scalable ML systems.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

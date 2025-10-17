@@ -14,6 +14,69 @@
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <script>
+    // Smooth scrolling for navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('a[href^="#"]');
+      
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Fade-in animation for project cards
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach(card => {
+        card.classList.add('fade-in-element');
+        observer.observe(card);
+      });
+
+      // Add active state to navigation on scroll
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('.site-nav .page-link');
+        
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -75,25 +138,108 @@
 
           <h2 id="projects">Projects</h2>
 
-          <p><strong>SmartShop – Personalized Grocery Item Recommendation System</strong><br>
-          <em>January 2023 – May 2023</em></p>
-          <ul>
-            <li>Built a personalized recommendation system with ML and deep learning.</li>
-            <li>Pre-processed, curated, and augmented large datasets; engineered features.</li>
-            <li>Benchmarked multiple ML architectures; visualized model performance with t-SNE and embeddings.</li>
-            <li>Managed a team of four; deployed the solution as a scalable API.</li>
-            <li>Publication: Peer-reviewed paper on SmartShop's approach to recommendation systems.</li>
-          </ul>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/smartshop.html">SmartShop: Personalized Grocery Recommendation System</a></h3>
+                <span class="project-date">January 2023 – May 2023</span>
+              </div>
+              <p class="project-description">
+                Built a personalized recommendation system using ML and deep learning. Led a team of four to develop, benchmark, and deploy a scalable API solution. Published peer-reviewed paper at ICONIC2023.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">FastAPI</span>
+              </div>
+              <a href="projects/smartshop.html" class="project-link">Learn more →</a>
+            </div>
 
-          <p><strong>Retail Store Analytics with SQL & Computer Vision</strong><br>
-          <em>June 2023 – September 2023</em></p>
-          <ul>
-            <li>Developed a retail analytics system combining computer vision and SQL-based reporting.</li>
-            <li>Used OpenCV and deep learning (YOLOv5, CNNs) for people counting and activity recognition from video feeds.</li>
-            <li>Designed SQL queries and dashboards for real-time sales and inventory analysis.</li>
-            <li>Integrated annotation tools for labelling video data; visualized embeddings and store traffic clusters.</li>
-            <li>Deployed solution on GCP with Dockerized services.</li>
-          </ul>
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/lab-equipment-calibration-manager.html">Lab Equipment Calibration Manager</a></h3>
+                <span class="project-date">January 2024 – April 2024</span>
+              </div>
+              <p class="project-description">
+                Developed a comprehensive web-based system for managing laboratory equipment calibration schedules, maintenance records, and compliance tracking. Reduced scheduling errors by 85%.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Django</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Celery</span>
+              </div>
+              <a href="projects/lab-equipment-calibration-manager.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/voice-recording-analysis.html">Voice Recording Analysis</a></h3>
+                <span class="project-date">September 2024 – December 2024</span>
+              </div>
+              <p class="project-description">
+                Advanced voice analysis system combining speech recognition, sentiment analysis, and audio processing. Achieved 95% transcription accuracy with speaker diarization and emotion detection.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Speech Recognition</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Audio Processing</span>
+              </div>
+              <a href="projects/voice-recording-analysis.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/ats-tools.html">ATS Tools: AI-Powered Resume Analysis</a></h3>
+                <span class="project-date">May 2024 – August 2024</span>
+              </div>
+              <p class="project-description">
+                Intelligent Applicant Tracking System leveraging AI and NLP for automated resume screening, candidate ranking, and job-resume matching. Reduced screening time by 70%.
+              </p>
+              <div class="project-tags">
+                <span class="tag">NLP</span>
+                <span class="tag">spaCy</span>
+                <span class="tag">BERT</span>
+                <span class="tag">Flask</span>
+              </div>
+              <a href="projects/ats-tools.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/new-words-prediction.html">New Words Prediction</a></h3>
+                <span class="project-date">October 2023 – December 2023</span>
+              </div>
+              <p class="project-description">
+                Advanced NLP system for predicting the next word in a sequence using deep learning. Implemented LSTM and Transformer models achieving 85% top-5 accuracy for autocomplete applications.
+              </p>
+              <div class="project-tags">
+                <span class="tag">NLP</span>
+                <span class="tag">LSTM</span>
+                <span class="tag">Transformers</span>
+                <span class="tag">TensorFlow</span>
+              </div>
+              <a href="projects/new-words-prediction.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3>Retail Store Analytics with SQL & Computer Vision</h3>
+                <span class="project-date">June 2023 – September 2023</span>
+              </div>
+              <p class="project-description">
+                Developed a retail analytics system combining computer vision and SQL-based reporting. Used YOLOv5 and CNNs for people counting and activity recognition. Deployed on GCP with Dockerized services.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">YOLOv5</span>
+                <span class="tag">SQL</span>
+                <span class="tag">GCP</span>
+              </div>
+            </div>
+          </div>
 
           <h2>Technical Skills</h2>
           <ul>

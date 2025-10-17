@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Voice Recording Analysis - Yash Kumar</title>
+  <meta name="description" content="AI-powered voice recording analysis and speech recognition system">
+  
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://yss107.github.io/projects/voice-recording-analysis.html">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <a class="site-title" href="/">Yash Kumar</a>
+      
+      <nav class="site-nav">
+        <div class="trigger">
+          <a class="page-link" href="/#about">About</a>
+          <a class="page-link" href="/#experience">Experience</a>
+          <a class="page-link" href="/#projects">Projects</a>
+          <a class="page-link" href="../assets/CV (2).pdf">CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post">
+        <div class="post-content">
+          <h1>Voice Recording Analysis</h1>
+          
+          <div class="project-meta">
+            <p><em>September 2024 – December 2024</em></p>
+            <p class="project-tags">
+              <span class="tag">Speech Recognition</span>
+              <span class="tag">Audio Processing</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+            </p>
+          </div>
+
+          <h2>Overview</h2>
+          <p>An advanced voice recording analysis system that combines speech recognition, sentiment analysis, and audio processing to extract insights from voice recordings. The system is designed for applications in customer service, meeting transcription, voice authentication, and emotion detection.</p>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><strong>Speech-to-Text:</strong> High-accuracy automatic speech recognition (ASR) supporting multiple languages and accents.</li>
+            <li><strong>Speaker Diarization:</strong> Automatic identification and segmentation of different speakers in multi-speaker recordings.</li>
+            <li><strong>Sentiment Analysis:</strong> Real-time emotion detection and sentiment scoring from voice tone and content.</li>
+            <li><strong>Audio Quality Enhancement:</strong> Noise reduction and audio enhancement using signal processing techniques.</li>
+            <li><strong>Keyword Spotting:</strong> Automatic detection of specific keywords and phrases in recordings.</li>
+            <li><strong>Voice Analytics:</strong> Extraction of acoustic features including pitch, energy, speaking rate, and pauses.</li>
+            <li><strong>Transcript Generation:</strong> Formatted transcripts with timestamps, speaker labels, and confidence scores.</li>
+            <li><strong>Summarization:</strong> AI-powered automatic summarization of long recordings.</li>
+          </ul>
+
+          <h2>Technical Implementation</h2>
+          <ul>
+            <li><strong>Audio Processing Pipeline:</strong>
+              <ul>
+                <li>Implemented preprocessing using librosa for audio feature extraction</li>
+                <li>Applied spectral subtraction and Wiener filtering for noise reduction</li>
+                <li>Developed Voice Activity Detection (VAD) to identify speech segments</li>
+                <li>Extracted MFCC, spectrogram, and mel-scale features for model input</li>
+              </ul>
+            </li>
+            <li><strong>Speech Recognition:</strong>
+              <ul>
+                <li>Integrated Whisper API for robust speech-to-text conversion</li>
+                <li>Implemented custom acoustic models using DeepSpeech2 architecture</li>
+                <li>Fine-tuned models on domain-specific audio datasets</li>
+                <li>Achieved 95% word accuracy on clean audio, 88% on noisy environments</li>
+              </ul>
+            </li>
+            <li><strong>Speaker Diarization:</strong>
+              <ul>
+                <li>Implemented speaker embedding extraction using x-vectors</li>
+                <li>Applied clustering algorithms (DBSCAN, spectral clustering) for speaker segmentation</li>
+                <li>Built speaker verification system using Siamese networks</li>
+                <li>Achieved 92% diarization accuracy on multi-speaker scenarios</li>
+              </ul>
+            </li>
+            <li><strong>Sentiment & Emotion Analysis:</strong>
+              <ul>
+                <li>Developed multi-modal emotion detection combining audio features and text</li>
+                <li>Trained CNN-LSTM models on emotional speech datasets (RAVDESS, IEMOCAP)</li>
+                <li>Implemented real-time sentiment tracking throughout recordings</li>
+                <li>Classified emotions into 7 categories: neutral, happy, sad, angry, fearful, surprised, disgusted</li>
+              </ul>
+            </li>
+            <li><strong>NLP Processing:</strong>
+              <ul>
+                <li>Applied named entity recognition on transcripts for information extraction</li>
+                <li>Implemented automatic summarization using transformer models (BART, T5)</li>
+                <li>Built topic modeling to identify key themes in conversations</li>
+                <li>Developed keyword extraction using TF-IDF and RAKE algorithms</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2>Results & Impact</h2>
+          <ul>
+            <li>Achieved 95% transcription accuracy on high-quality audio recordings.</li>
+            <li>Reduced manual transcription time by 90% through automation.</li>
+            <li>Reached 88% accuracy in emotion classification across diverse audio samples.</li>
+            <li>Successfully processed recordings ranging from 1 minute to 2 hours in length.</li>
+            <li>Supported 5+ languages with multilingual ASR capabilities.</li>
+            <li>Average processing time: 1x real-time (1-hour recording processed in ~1 hour).</li>
+          </ul>
+
+          <h2>Applications</h2>
+          <ul>
+            <li><strong>Customer Service:</strong> Analyze customer calls for quality assurance and sentiment tracking</li>
+            <li><strong>Meeting Transcription:</strong> Automatic note-taking and action item extraction from meetings</li>
+            <li><strong>Voice Authentication:</strong> Speaker verification for security applications</li>
+            <li><strong>Healthcare:</strong> Medical dictation and patient interview analysis</li>
+            <li><strong>Media & Content:</strong> Podcast transcription and searchable audio archives</li>
+            <li><strong>Legal:</strong> Court recording transcription and evidence analysis</li>
+          </ul>
+
+          <h2>Technologies Used</h2>
+          <p><strong>Speech Processing:</strong> Whisper API, DeepSpeech, Wav2Vec 2.0<br>
+          <strong>Audio Libraries:</strong> librosa, pydub, soundfile, webrtcvad<br>
+          <strong>Deep Learning:</strong> PyTorch, TensorFlow, Keras<br>
+          <strong>NLP:</strong> spaCy, Transformers (Hugging Face), NLTK<br>
+          <strong>Feature Engineering:</strong> MFCC, spectrograms, mel-scale, prosody features<br>
+          <strong>Backend:</strong> FastAPI, Celery (async processing)<br>
+          <strong>Database:</strong> PostgreSQL, AWS S3 (audio storage)<br>
+          <strong>Deployment:</strong> Docker, Kubernetes, AWS</p>
+
+          <div class="project-navigation">
+            <a href="/#projects" class="back-link">← Back to Projects</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:Jangidyash590@gmail.com">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span class="username">Jangidyash590@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/yashkumar" target="_blank">
+                <span class="icon"><i class="fab fa-twitter"></i></span>
+                <span class="username">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/yash-kumar09/" target="_blank">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span class="username">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/yss107" target="_blank">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span class="username">yss107</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-2">
+          <p>Machine Learning Engineer specializing in AI solutions, computer vision, and scalable ML systems.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
