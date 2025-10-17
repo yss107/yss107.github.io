@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>New Words Prediction - Yash Kumar</title>
+  <meta name="description" content="New Words Prediction project using NLP and deep learning">
+  
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://yss107.github.io/projects/new-words-prediction.html">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <a class="site-title" href="/">Yash Kumar</a>
+      
+      <nav class="site-nav">
+        <div class="trigger">
+          <a class="page-link" href="/#about">About</a>
+          <a class="page-link" href="/#experience">Experience</a>
+          <a class="page-link" href="/#projects">Projects</a>
+          <a class="page-link" href="../assets/CV (2).pdf">CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post">
+        <div class="post-content">
+          <h1>New Words Prediction</h1>
+          
+          <div class="project-meta">
+            <p><em>October 2023 – December 2023</em></p>
+            <p class="project-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">LSTM</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">Python</span>
+            </p>
+          </div>
+
+          <h2>Overview</h2>
+          <p>An advanced Natural Language Processing system that predicts the next word in a sequence using deep learning techniques. The model is trained on large text corpora and can generate contextually relevant word suggestions for autocomplete and text generation applications.</p>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><strong>Context-Aware Predictions:</strong> Utilizes contextual information from preceding words to generate accurate predictions.</li>
+            <li><strong>Multiple Model Architectures:</strong> Implemented and compared LSTM, GRU, and Transformer-based models.</li>
+            <li><strong>Real-time Inference:</strong> Optimized model serving for sub-50ms response times.</li>
+            <li><strong>Multi-domain Support:</strong> Trained on diverse text domains including technical documentation, literature, and conversational data.</li>
+            <li><strong>Top-K Predictions:</strong> Generates multiple word suggestions ranked by probability.</li>
+            <li><strong>Interactive Demo:</strong> Web-based interface for testing predictions in real-time.</li>
+          </ul>
+
+          <h2>Technical Implementation</h2>
+          <ul>
+            <li><strong>Data Collection & Processing:</strong>
+              <ul>
+                <li>Curated dataset from multiple sources including books, articles, and conversational data</li>
+                <li>Preprocessed 50M+ words with tokenization, lemmatization, and cleaning</li>
+                <li>Implemented efficient data pipelines using TensorFlow data API</li>
+              </ul>
+            </li>
+            <li><strong>Model Architecture:</strong>
+              <ul>
+                <li>Developed LSTM-based sequence model with 3 layers and 512 hidden units</li>
+                <li>Implemented attention mechanism for improved context understanding</li>
+                <li>Experimented with pre-trained transformers (GPT-2, BERT) for transfer learning</li>
+                <li>Used word embeddings (Word2Vec, GloVe) for semantic representation</li>
+              </ul>
+            </li>
+            <li><strong>Training & Optimization:</strong>
+              <ul>
+                <li>Applied teacher forcing and scheduled sampling techniques</li>
+                <li>Implemented gradient clipping and dropout for regularization</li>
+                <li>Optimized hyperparameters using grid search and Bayesian optimization</li>
+                <li>Achieved 65% top-1 accuracy and 85% top-5 accuracy on test set</li>
+              </ul>
+            </li>
+            <li><strong>Deployment:</strong>
+              <ul>
+                <li>Quantized model for faster inference (TensorFlow Lite)</li>
+                <li>Built REST API using Flask for model serving</li>
+                <li>Implemented caching strategy for frequently predicted sequences</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2>Results & Metrics</h2>
+          <ul>
+            <li>Achieved 65% top-1 prediction accuracy on diverse test corpus.</li>
+            <li>Reached 85% top-5 accuracy for word suggestions.</li>
+            <li>Reduced model size by 4x through quantization while maintaining 95% accuracy.</li>
+            <li>Average inference time: 35ms per prediction.</li>
+            <li>Perplexity score: 42.5 on validation set.</li>
+          </ul>
+
+          <h2>Applications</h2>
+          <ul>
+            <li>Smart keyboard autocomplete</li>
+            <li>Text generation and content creation</li>
+            <li>Search query suggestions</li>
+            <li>Email and message composition assistance</li>
+            <li>Code completion for programming environments</li>
+          </ul>
+
+          <h2>Technologies Used</h2>
+          <p><strong>Deep Learning:</strong> TensorFlow, Keras, PyTorch<br>
+          <strong>NLP:</strong> NLTK, SpaCy, Transformers (Hugging Face)<br>
+          <strong>Embeddings:</strong> Word2Vec, GloVe, FastText<br>
+          <strong>API:</strong> Flask, RESTful design<br>
+          <strong>Frontend:</strong> HTML, CSS, JavaScript<br>
+          <strong>Tools:</strong> Jupyter Notebook, TensorBoard, Weights & Biases</p>
+
+          <div class="project-navigation">
+            <a href="/#projects" class="back-link">← Back to Projects</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:Jangidyash590@gmail.com">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span class="username">Jangidyash590@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/yashkumar" target="_blank">
+                <span class="icon"><i class="fab fa-twitter"></i></span>
+                <span class="username">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/yash-kumar09/" target="_blank">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span class="username">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/yss107" target="_blank">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span class="username">yss107</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-2">
+          <p>Machine Learning Engineer specializing in AI solutions, computer vision, and scalable ML systems.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
