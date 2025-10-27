@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Experience - Yash Kumar</title>
+  <meta name="description" content="Professional experience, skills, publications and education of Yash Kumar - Machine Learning Engineer.">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://yss107.github.io/experience.html">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <script>
+    // Smooth scrolling for navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('a[href^="#"]');
+      
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add active state to navigation on scroll
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('h2[id]');
+        const navLinks = document.querySelectorAll('.site-nav .page-link');
+        
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <a class="site-title" href="/">Yash Kumar</a>
+      
+      <nav class="site-nav">
+        <div class="trigger">
+          <a class="page-link" href="/#about">About</a>
+          <a class="page-link" href="/experience.html">Experience</a>
+          <a class="page-link" href="/#projects">Projects</a>
+          <a class="page-link" href="assets/CV (2).pdf">CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post">
+        <div class="post-content">
+          <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+          
+          <div class="experience-item">
+            <div class="experience-header">
+              <p class="experience-title">Alignerr – Machine Learning Engineer (Freelance)</p>
+              <p class="experience-date">January 2025 – May 2025</p>
+            </div>
+            <ul>
+              <li>Engineered constraint-based scheduling systems in Python, leveraging OR-Tools and Z3 for NP-hard problems.</li>
+              <li>Developed hybrid decision systems by integrating symbolic reasoning with machine learning.</li>
+              <li>Built validation and data curation scripts to test solver outputs across edge cases.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <p class="experience-title">Outlier AI – Machine Learning Expert</p>
+              <p class="experience-date">August 2024 – December 2024</p>
+            </div>
+            <ul>
+              <li>Improved predictive model accuracy by 20% through advanced ML optimization and feature engineering.</li>
+              <li>Automated image processing pipelines using OpenCV and deep learning for computer vision tasks.</li>
+              <li>Designed and optimized SQL queries for data extraction, transformation, and ML reporting.</li>
+              <li>Deployed scalable ML APIs (FastAPI, Flask); collaborated with data labelling teams for annotation management.</li>
+            </ul>
+          </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+              <div class="skill-category">
+                <div class="skill-category-title">Programming</div>
+                <ul>
+                  <li>Python (expert)</li>
+                  <li>SQL</li>
+                  <li>C/C++</li>
+                  <li>Java</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">ML Frameworks</div>
+                <ul>
+                  <li>PyTorch</li>
+                  <li>TensorFlow</li>
+                  <li>Scikit-learn</li>
+                  <li>Keras</li>
+                  <li>OpenCV</li>
+                  <li>NLTK, SpaCy</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">Computer Vision</div>
+                <ul>
+                  <li>CNNs, Transformers</li>
+                  <li>YOLO architectures</li>
+                  <li>Image processing</li>
+                  <li>Data augmentation</li>
+                  <li>t-SNE, embeddings</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">Data Engineering</div>
+                <ul>
+                  <li>Data wrangling, EDA</li>
+                  <li>SQL querying</li>
+                  <li>PostgreSQL</li>
+                  <li>MongoDB</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">API Development</div>
+                <ul>
+                  <li>FastAPI</li>
+                  <li>Flask</li>
+                  <li>RESTful APIs</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">Cloud & DevOps</div>
+                <ul>
+                  <li>AWS, GCP</li>
+                  <li>Docker</li>
+                  <li>Kubernetes</li>
+                  <li>Jenkins</li>
+                  <li>Git, GitHub</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Publications</h2>
+          <ul>
+            <li>
+              <strong>SmartShop:</strong> Personalized Grocery Item Recommendation System ICONIC2023<br>
+              Yash Kumar, Hasib Ahmed, Himanshu Kumar Sinha
+            </li>
+            <li>
+              <strong>Prediction Model for Flight Fare:</strong> A Generic Review ETEMPS 2024<br>
+              Yash Kumar, Hasib Ahmed, Venkata Subhash
+            </li>
+          </ul>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Education</h2>
+            <p><strong>Bachelor of Science in Information Technology</strong><br>
+            Lovely Professional University, Punjab<br>
+            <em>June 2021 – July 2024</em></p>
+          </section>
+
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:Jangidyash590@gmail.com">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span class="username">Jangidyash590@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/yashkumar" target="_blank">
+                <span class="icon"><i class="fab fa-twitter"></i></span>
+                <span class="username">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/yash-kumar09/" target="_blank">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span class="username">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/yss107" target="_blank">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span class="username">yss107</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-2">
+          <p>Machine Learning Engineer specializing in AI solutions, computer vision, and scalable ML systems.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
