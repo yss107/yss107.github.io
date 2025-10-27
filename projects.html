@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Projects - Yash Kumar</title>
+  <meta name="description" content="Portfolio of machine learning and AI projects by Yash Kumar.">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://yss107.github.io/projects.html">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <script>
+    // Fade-in animation for project cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach(card => {
+        card.classList.add('fade-in-element');
+        observer.observe(card);
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <a class="site-title" href="/">Yash Kumar</a>
+      
+      <nav class="site-nav">
+        <div class="trigger">
+          <a class="page-link" href="/">About</a>
+          <a class="page-link" href="/projects.html">Projects</a>
+          <a class="page-link" href="/experience.html">Experience</a>
+          <a class="page-link" href="/assets/CV (2).pdf">CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post">
+        <div class="post-content">
+          <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/smartshop.html">SmartShop: Personalized Grocery Recommendation System</a></h3>
+                <span class="project-date">January 2023 – May 2023</span>
+              </div>
+              <p class="project-description">
+                Built a personalized recommendation system using ML and deep learning. Led a team of four to develop, benchmark, and deploy a scalable API solution. Published peer-reviewed paper at ICONIC2023.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">FastAPI</span>
+              </div>
+              <a href="projects/smartshop.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/lab-equipment-calibration-manager.html">Lab Equipment Calibration Manager</a></h3>
+                <span class="project-date">January 2024 – April 2024</span>
+              </div>
+              <p class="project-description">
+                Developed a comprehensive web-based system for managing laboratory equipment calibration schedules, maintenance records, and compliance tracking. Reduced scheduling errors by 85%.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Django</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Celery</span>
+              </div>
+              <a href="projects/lab-equipment-calibration-manager.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/voice-recording-analysis.html">Voice Recording Analysis</a></h3>
+                <span class="project-date">September 2024 – December 2024</span>
+              </div>
+              <p class="project-description">
+                Advanced voice analysis system combining speech recognition, sentiment analysis, and audio processing. Achieved 95% transcription accuracy with speaker diarization and emotion detection.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Speech Recognition</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Audio Processing</span>
+              </div>
+              <a href="projects/voice-recording-analysis.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/ats-tools.html">ATS Tools: AI-Powered Resume Analysis</a></h3>
+                <span class="project-date">May 2024 – August 2024</span>
+              </div>
+              <p class="project-description">
+                Intelligent Applicant Tracking System leveraging AI and NLP for automated resume screening, candidate ranking, and job-resume matching. Reduced screening time by 70%.
+              </p>
+              <div class="project-tags">
+                <span class="tag">NLP</span>
+                <span class="tag">spaCy</span>
+                <span class="tag">BERT</span>
+                <span class="tag">Flask</span>
+              </div>
+              <a href="projects/ats-tools.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3><a href="projects/new-words-prediction.html">New Words Prediction</a></h3>
+                <span class="project-date">October 2023 – December 2023</span>
+              </div>
+              <p class="project-description">
+                Advanced NLP system for predicting the next word in a sequence using deep learning. Implemented LSTM and Transformer models achieving 85% top-5 accuracy for autocomplete applications.
+              </p>
+              <div class="project-tags">
+                <span class="tag">NLP</span>
+                <span class="tag">LSTM</span>
+                <span class="tag">Transformers</span>
+                <span class="tag">TensorFlow</span>
+              </div>
+              <a href="projects/new-words-prediction.html" class="project-link">Learn more →</a>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-header">
+                <h3>Retail Store Analytics with SQL & Computer Vision</h3>
+                <span class="project-date">June 2023 – September 2023</span>
+              </div>
+              <p class="project-description">
+                Developed a retail analytics system combining computer vision and SQL-based reporting. Used YOLOv5 and CNNs for people counting and activity recognition. Deployed on GCP with Dockerized services.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">YOLOv5</span>
+                <span class="tag">SQL</span>
+                <span class="tag">GCP</span>
+              </div>
+            </div>
+          </div>
+          </section>
+
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:Jangidyash590@gmail.com">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span class="username">Jangidyash590@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/yashkumar" target="_blank">
+                <span class="icon"><i class="fab fa-twitter"></i></span>
+                <span class="username">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/yash-kumar09/" target="_blank">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span class="username">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/yss107" target="_blank">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span class="username">yss107</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-2">
+          <p>Machine Learning Engineer specializing in AI solutions, computer vision, and scalable ML systems.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
