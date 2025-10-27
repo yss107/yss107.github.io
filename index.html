@@ -97,46 +97,75 @@
   </header>
 
   <main class="page-content" aria-label="Content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="wrapper">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Yash Kumar</h1>
+            <p class="subtitle">Machine Learning Engineer specializing in AI solutions, computer vision, and scalable ML systems</p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="assets/CV (2).pdf" class="btn btn-secondary">Download CV</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img alt="Yash Kumar" src="assets/Untitled design.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
     <div class="wrapper">
       <article class="post">
         <div class="post-content">
-          <p>
-            <img alt="Yash Kumar" src="assets/Untitled design.png" 
-                 style="float: right; max-width: 33%; margin: 0 0 1em 2em; border-radius: 999px" />
-          </p>
+          <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <p>I'm Yash Kumar, a Machine Learning Engineer specializing in AI solutions for business impact. I grew up in Jodhpur, India, a vibrant city known for its rich heritage.</p>
 
-          <p>I'm Yash Kumar, a Machine Learning Engineer specializing in AI solutions for business impact. I grew up in Jodhpur, India, a vibrant city known for its rich heritage.</p>
+            <p>My focus is on ML/AI systems in production, with expertise in computer vision, model optimization, and scalable ML architectures. I'm passionate about solving complex problems with elegant solutions.</p>
 
-          <p>My focus is on ML/AI systems in production, with expertise in computer vision, model optimization, and scalable ML architectures. I'm passionate about solving complex problems with elegant solutions.</p>
+            <p>Previously, I worked as a Machine Learning Expert at <strong>Outlier AI</strong>, where I improved predictive model accuracy by 20% and automated image processing pipelines using OpenCV and deep learning. Currently, I'm a freelance ML Engineer at <strong>Alignerr</strong>, developing constraint-based scheduling systems and hybrid decision systems.</p>
 
-          <p>Previously, I worked as a Machine Learning Expert at <strong>Outlier AI</strong>, where I improved predictive model accuracy by 20% and automated image processing pipelines using OpenCV and deep learning. Currently, I'm a freelance ML Engineer at <strong>Alignerr</strong>, developing constraint-based scheduling systems and hybrid decision systems.</p>
+            <p>I graduated from Lovely Professional University with a Bachelor's degree in Information Technology. During my studies, I led the development of <strong>SmartShop</strong>, a personalized grocery recommendation system that resulted in a peer-reviewed publication.</p>
 
-          <p>I graduated from Lovely Professional University with a Bachelor's degree in Information Technology. During my studies, I led the development of <strong>SmartShop</strong>, a personalized grocery recommendation system that resulted in a peer-reviewed publication.</p>
+            <p>I'm proficient in Python, SQL, PyTorch, and TensorFlow. I've deployed ML solutions using FastAPI, Flask, and cloud platforms like AWS and GCP. My work often involves computer vision tasks using CNNs, Transformers, and YOLO architectures.</p>
 
-          <p>I'm proficient in Python, SQL, PyTorch, and TensorFlow. I've deployed ML solutions using FastAPI, Flask, and cloud platforms like AWS and GCP. My work often involves computer vision tasks using CNNs, Transformers, and YOLO architectures.</p>
+            <p>I'm active on <a href="https://github.com/yss107">GitHub</a> and always eager to collaborate on interesting technical challenges. Feel free to <a href="mailto:Jangidyash590@gmail.com">reach out</a> if you want to work together!</p>
+          </section>
 
-          <p>I'm active on <a href="https://github.com/yss107">GitHub</a> and always eager to collaborate on interesting technical challenges. Feel free to <a href="mailto:Jangidyash590@gmail.com">reach out</a> if you want to work together!</p>
-
-          <h2 id="experience">Experience</h2>
+          <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
           
-          <p><strong>Alignerr – Machine Learning Engineer (Freelance)</strong><br>
-          <em>January 2025 – May 2025</em></p>
-          <ul>
-            <li>Engineered constraint-based scheduling systems in Python, leveraging OR-Tools and Z3 for NP-hard problems.</li>
-            <li>Developed hybrid decision systems by integrating symbolic reasoning with machine learning.</li>
-            <li>Built validation and data curation scripts to test solver outputs across edge cases.</li>
-          </ul>
+          <div class="experience-item">
+            <div class="experience-header">
+              <p class="experience-title">Alignerr – Machine Learning Engineer (Freelance)</p>
+              <p class="experience-date">January 2025 – May 2025</p>
+            </div>
+            <ul>
+              <li>Engineered constraint-based scheduling systems in Python, leveraging OR-Tools and Z3 for NP-hard problems.</li>
+              <li>Developed hybrid decision systems by integrating symbolic reasoning with machine learning.</li>
+              <li>Built validation and data curation scripts to test solver outputs across edge cases.</li>
+            </ul>
+          </div>
 
-          <p><strong>Outlier AI – Machine Learning Expert</strong><br>
-          <em>August 2024 – December 2024</em></p>
-          <ul>
-            <li>Improved predictive model accuracy by 20% through advanced ML optimization and feature engineering.</li>
-            <li>Automated image processing pipelines using OpenCV and deep learning for computer vision tasks.</li>
-            <li>Designed and optimized SQL queries for data extraction, transformation, and ML reporting.</li>
-            <li>Deployed scalable ML APIs (FastAPI, Flask); collaborated with data labelling teams for annotation management.</li>
-          </ul>
+          <div class="experience-item">
+            <div class="experience-header">
+              <p class="experience-title">Outlier AI – Machine Learning Expert</p>
+              <p class="experience-date">August 2024 – December 2024</p>
+            </div>
+            <ul>
+              <li>Improved predictive model accuracy by 20% through advanced ML optimization and feature engineering.</li>
+              <li>Automated image processing pipelines using OpenCV and deep learning for computer vision tasks.</li>
+              <li>Designed and optimized SQL queries for data extraction, transformation, and ML reporting.</li>
+              <li>Deployed scalable ML APIs (FastAPI, Flask); collaborated with data labelling teams for annotation management.</li>
+            </ul>
+          </div>
+          </section>
 
-          <h2 id="projects">Projects</h2>
+          <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
 
           <div class="projects-grid">
             <div class="project-card">
@@ -240,19 +269,79 @@
               </div>
             </div>
           </div>
+          </section>
 
-          <h2>Technical Skills</h2>
-          <ul>
-            <li><strong>Programming:</strong> Python (expert), SQL, C/C++, Java, JavaScript</li>
-            <li><strong>ML Frameworks:</strong> PyTorch, TensorFlow, Scikit-learn, Keras, OpenCV, NLTK, SpaCy</li>
-            <li><strong>Computer Vision:</strong> CNNs, Transformers, YOLO, image processing, data augmentation, annotation, t-SNE, embeddings, clustering</li>
-            <li><strong>Data Engineering:</strong> Data wrangling, EDA, SQL querying, PostgreSQL, MongoDB</li>
-            <li><strong>API Development:</strong> FastAPI, Flask, RESTful APIs</li>
-            <li><strong>Cloud & DevOps:</strong> AWS, GCP, Docker, Kubernetes, Jenkins</li>
-            <li><strong>Version Control:</strong> Git, GitHub, Bitbucket</li>
-          </ul>
+          <section class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+              <div class="skill-category">
+                <div class="skill-category-title">Programming</div>
+                <ul>
+                  <li>Python (expert)</li>
+                  <li>SQL</li>
+                  <li>C/C++</li>
+                  <li>Java</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">ML Frameworks</div>
+                <ul>
+                  <li>PyTorch</li>
+                  <li>TensorFlow</li>
+                  <li>Scikit-learn</li>
+                  <li>Keras</li>
+                  <li>OpenCV</li>
+                  <li>NLTK, SpaCy</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">Computer Vision</div>
+                <ul>
+                  <li>CNNs, Transformers</li>
+                  <li>YOLO architectures</li>
+                  <li>Image processing</li>
+                  <li>Data augmentation</li>
+                  <li>t-SNE, embeddings</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">Data Engineering</div>
+                <ul>
+                  <li>Data wrangling, EDA</li>
+                  <li>SQL querying</li>
+                  <li>PostgreSQL</li>
+                  <li>MongoDB</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">API Development</div>
+                <ul>
+                  <li>FastAPI</li>
+                  <li>Flask</li>
+                  <li>RESTful APIs</li>
+                </ul>
+              </div>
+              
+              <div class="skill-category">
+                <div class="skill-category-title">Cloud & DevOps</div>
+                <ul>
+                  <li>AWS, GCP</li>
+                  <li>Docker</li>
+                  <li>Kubernetes</li>
+                  <li>Jenkins</li>
+                  <li>Git, GitHub</li>
+                </ul>
+              </div>
+            </div>
+          </section>
 
-          <h2>Publications</h2>
+          <section class="section">
+            <h2 class="section-title">Publications</h2>
           <ul>
             <li>
               <strong>SmartShop:</strong> Personalized Grocery Item Recommendation System ICONIC2023<br>
@@ -263,11 +352,14 @@
               Yash Kumar, Hasib Ahmed, Venkata Subhash
             </li>
           </ul>
+          </section>
 
-          <h2>Education</h2>
-          <p><strong>Bachelor of Science in Information Technology</strong><br>
-          Lovely Professional University, Punjab<br>
-          <em>June 2021 – July 2024</em></p>
+          <section class="section">
+            <h2 class="section-title">Education</h2>
+            <p><strong>Bachelor of Science in Information Technology</strong><br>
+            Lovely Professional University, Punjab<br>
+            <em>June 2021 – July 2024</em></p>
+          </section>
 
         </div>
       </article>
