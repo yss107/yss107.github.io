@@ -83,6 +83,9 @@ a:hover {
   font-size: 15px;
   transition: color 0.2s ease;
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .site-nav .page-link::after {
@@ -103,6 +106,13 @@ a:hover {
 .site-nav .page-link:hover::after,
 .site-nav .page-link.active::after {
   width: 100%;
+}
+
+.site-nav .page-link .icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
 }
 
 /* Wrapper */
