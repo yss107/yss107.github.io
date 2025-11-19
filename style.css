@@ -508,6 +508,7 @@ a:hover {
 .project-link {
   display: inline-flex;
   align-items: center;
+  gap: 5px;
   color: var(--primary-color);
   font-weight: 600;
   text-decoration: none;
@@ -520,6 +521,13 @@ a:hover {
   color: var(--secondary-color);
   transform: translateX(5px);
   text-decoration: none;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 /* Fade-in animation */
