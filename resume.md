@@ -30,7 +30,7 @@ LoRA, quantization (bitsandbytes), Hugging Face Transformers, retrieval-augmente
 Claude Code, GitHub Copilot
 
 ### AI Frameworks & APIs
-LangChain, LlamaIndex, Haystack, OpenAI APIs, MosaicML, OpenLLM
+LangChain, LlamaIndex, Haystack, OpenAI APIs, Databricks, OpenLLM
 
 ### Speech & Voice Tools
 Whisper, Bhashini APIs
@@ -114,4 +114,4 @@ Model performance monitoring, A/B testing, quality metrics tracking
 
 ---
 
-*Last updated: November 2025*
+*Last updated: November 2024*
